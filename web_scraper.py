@@ -1,4 +1,3 @@
-import bs4.element
 import requests
 from bs4 import BeautifulSoup
 
@@ -10,13 +9,14 @@ def scrape(url):
 
     soup = BeautifulSoup(data.content, 'html.parser')
 
-    p = soup.find_all('p', class_='body-graf')
+    # T1 p = soup.find_all('p', class_='body-graf')
+    p = soup.find_all('p', class_='dcr-s3ycb2')
 
     sentences = []
     for words in p:
         text = words.get_text()
 
-        for sentence in text.split(','):
+        for sentence in text.split('.'):
             cleaned_sentence = sentence.strip()
             if cleaned_sentence:
                 sentences.append(cleaned_sentence)
@@ -25,7 +25,8 @@ def scrape(url):
 
     return sentences
 
-url = 'https://www.nbcnews.com/politics/doge/doge-days-musk-trump-tout-cuts-fraud-claims-are-debunked-rcna192217'
+# T1 url = 'https://www.nbcnews.com/politics/doge/doge-days-musk-trump-tout-cuts-fraud-claims-are-debunked-rcna192217'
+url = 'https://www.theguardian.com/commentisfree/2024/nov/04/ipp-sentences-labour-england-wales-prisons'
 sentences = scrape(url=url)
 if sentences:
     for sentence in sentences:
