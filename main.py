@@ -19,4 +19,4 @@ async def label(text: InputText):
     input_x = np.array([text], dtype=str)
 
     output = onnx_session.run(None, {"input": input_x})
-    return {"message": "Predicted label: " + output[0][0]}
+    return {"sentiment": output[0][0]}
