@@ -1,0 +1,6 @@
+streamlit
+fastapi
+numpy
+onnxruntime
+onnx
+requests

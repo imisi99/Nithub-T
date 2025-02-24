@@ -6,6 +6,6 @@ st.write("This will detect the sentiment of the text it can be positive, negativ
 text = st.text_input("Enter the text you want to analyze", key="text")
 data = {"text": text}
 if st.button("Analyze"):
-    response = requests.get("http://localhost:8000/label", json=data)
+    response = requests.get("https://sentiment-analysis-vykl.onrender.com/label", json=data)
     sentiment = response.json()["sentiment"]
     st.write(sentiment)
