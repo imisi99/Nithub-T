@@ -5,4 +5,4 @@ Accessing the System
 
     API Endpoint: The sentiment analysis model is accessible through a FastAPI-based REST API.
     Web Interface: A Streamlit-based UI allows for interactive sentiment predictions.
-access the [api](https://sentiment-analysis-vykl.onrender.com/docs) or [web](https://sentiment-analysis-s.streamlit.app) version
+access the [api](https://sentiment-api-uf2f.onrender.com/docs) or [web](https://sentiment-analysis-s.streamlit.app) version
