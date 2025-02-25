@@ -2,12 +2,12 @@ from fastapi import FastAPI
 import numpy as np
 from pydantic import BaseModel
 import onnxruntime as ort
-import os
 import locale
 
-os.environ["LANG"] = "C.UTF-8"
-os.environ["LC_ALL"] = "C.UTF-8"
-locale.setlocale(locale.LC_ALL, "C.UTF-8")
+try:
+    locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
+except locale.Error:
+    locale.setlocale(locale.LC_ALL, "C")
 app = FastAPI()
 
 
