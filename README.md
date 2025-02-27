@@ -6,3 +6,6 @@ Accessing the System
     API Endpoint: The sentiment analysis model is accessible through a FastAPI-based REST API.
     Web Interface: A Streamlit-based UI allows for interactive sentiment predictions.
 access the [api](https://sentiment-api-uf2f.onrender.com/docs) or [web](https://sentiment-analysis-s.streamlit.app) version
+
+ Note: Since the backend is hosted on Render, the API might experience a cold start delay when accessed for the first time after a period of inactivity.   
+ This means the server might take a few seconds to wake up before responding to requests.
