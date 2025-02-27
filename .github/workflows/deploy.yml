@@ -17,7 +17,7 @@ jobs:
 
       - name: Build and Push Dcoker Image
         run: |
-          docker built -t imisi99/sentiment:latest
+          docker build -t imisi99/sentiment:latest .
           docker push imisi99/sentiment:latest
 
   deploy:
@@ -26,4 +26,4 @@ jobs:
 
     steps:
       - name: Trigger Render Deployment
-        run: curl - X POST "https://api.render.com/deploy/srv-cuuhmsqn91rc738i1gj0?key=${{ secrets.RENDER_API_KEY }}"
+        run: curl -X POST "https://api.render.com/deploy/srv-cuuhmsqn91rc738i1gj0?key=${{ secrets.RENDER_API_KEY }}"
